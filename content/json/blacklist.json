@@ -217,7 +217,7 @@
         "level": 1
       },
       {
-        "name": "stitches",
+        "name": "Stitches",
         "pop_description": "",
         "level": 1
       },
@@ -964,7 +964,7 @@
     "heroes": [
       {
         "name": "Alexstrasza",
-        "pop_description": "Va en pareja con ResonantHarm, feedea al stitches con la W build",
+        "pop_description": "Va en pareja con ResonantHarm, feedea al Stitches con la W build",
         "level": 2
       }
     ]
@@ -995,7 +995,7 @@
     "player_rank": "Diamante",
     "heroes": [
       {
-        "name": "stitches",
+        "name": "Stitches",
         "pop_description": "Jode bien stackeado el csm",
         "level": 3
       }
