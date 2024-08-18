@@ -1086,5 +1086,64 @@
     "player_name": "AvenaQuaker",
     "player_rank": "Diamante",
     "heroes": []
+  },
+  {
+    "player_name": "TH4T4NK",
+    "player_rank": "Diamante",
+    "heroes": [
+      {
+        "name": "Maiev",
+        "pop_description": "Level 976",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "player_name": "ArtyFarty",
+    "player_rank": "Diamante SMURF",
+    "heroes": [
+      {
+        "name": "Chromie",
+        "pop_description": "",
+        "level": 3
+      },
+      {
+        "name": "Cringris",
+        "pop_description": "",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "player_name": "Logic",
+    "player_rank": "Platino",
+    "heroes": [
+      {
+        "name": "Yrel",
+        "pop_description": "",
+        "level": 3
+      },
+      {
+        "name": "Hogger",
+        "pop_description": "",
+        "level": 3
+      },
+      {
+        "name": "Blaze",
+        "pop_description": "",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "player_name": "WaffleCapter",
+    "player_rank": "Diamante",
+    "heroes": [
+      {
+        "name": "BW",
+        "pop_description": "",
+        "level": 3
+      }
+    ]
   }
 ]
