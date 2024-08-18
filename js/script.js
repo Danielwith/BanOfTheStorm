@@ -40,7 +40,6 @@ document.getElementById("inputSearch").addEventListener("input", function () {
 
 fetchUrlsImg()
   .then((r) => {
-    console.log(r);
     generateHtml(r[0], r[1]);
   })
   .catch((error) => {
