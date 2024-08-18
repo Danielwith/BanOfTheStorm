@@ -49,10 +49,9 @@ fetchUrlsImg()
 
 function generateHtml(hero_url, json_url) {
   fetch(json_url, {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-    },
+    origin: ["*"],
+    method: ["GET"],
+    maxAgeSeconds: "360000000",
   })
     .then((response) => response.json())
     .then((data) => {
@@ -93,5 +92,7 @@ function generateHtml(hero_url, json_url) {
         );
       });
     })
-    .catch((error) => console.error("Error al leer el JSON:", error));
+    .catch((error) => {
+      console.error("Error al leer el JSON:", error);
+    });
 }
