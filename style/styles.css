@@ -22,7 +22,7 @@ p {
   /* border-radius: 15px; */
   color: white;
 
-  background-image: url("/content/img/heroes_main.jpg");
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/ban-of-storm.appspot.com/o/img%2Fheroes_main.jpg?alt=media&token=b6881119-d5e0-4688-b0dd-2125c1314780");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
@@ -45,7 +45,7 @@ p {
 }
 
 .player-container > .player-content:first-child {
-  background-image: url("/content/img/card-artanis.png");
+  /* background-image: url("/content/img/card-artanis.png"); */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -68,6 +68,7 @@ p {
 .history-container {
   height: 700px;
   overflow: auto;
+  width: 100%;
 }
 
 .history-container > .history-content {
