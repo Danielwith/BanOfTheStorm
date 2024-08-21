@@ -1,4 +1,4 @@
-import { fetchUrlsImg } from "./config.js";
+import { fetchUrlsImg } from "./config_firebase.js";
 
 var playersHTML = "";
 
@@ -24,7 +24,7 @@ document.getElementById("themeToggleBtn").addEventListener("click", () => {
 
 document.getElementById("inputSearch").addEventListener("input", function () {
   const searchTerm = this.value.toLowerCase();
-  const cards = document.querySelectorAll(".backlist-list .card");
+  const cards = document.querySelectorAll(".blacklist-list .card");
 
   cards.forEach((card) => {
     const playerName = card
@@ -40,6 +40,7 @@ document.getElementById("inputSearch").addEventListener("input", function () {
 
 fetchUrlsImg()
   .then((r) => {
+    window["objURLHero"] = r[0];
     generateHtml(r[0], r[1]);
   })
   .catch((error) => {
@@ -76,12 +77,19 @@ function generateHtml(hero_url, json_url) {
           </button>`;
         });
 
-        playersHTML += `
-                </div>
-              </div>
-            </div>`;
+        playersHTML += `</div>
+                  <div class="hero-extra text-center">
+                    <button class="btn btn-outline-success w-50 my-3" id="button_${player.player_name}" onclick="getPlayerInfo('${player.player_name}')">Ver mas
+                      datos...</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="${player.player_name}_player_details"
+                    </div>
+                  </div>
+                  </div>`;
 
-        document.querySelector(".backlist-list").innerHTML = playersHTML;
+        document.querySelector(".blacklist-list").innerHTML = playersHTML;
 
         const popoverTriggerList = document.querySelectorAll(
           '[data-bs-toggle="popover"]'

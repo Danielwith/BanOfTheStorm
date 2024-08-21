@@ -32,16 +32,12 @@ p {
   display: flex;
   flex-flow: row wrap;
   height: inherit;
-  justify-content: space-evenly;
 }
 
 .player-container > .player-content {
   flex-grow: 1;
   padding: 1.6rem 2em;
   position: relative;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-evenly;
 }
 
 .player-container > .player-content:first-child {
@@ -49,24 +45,23 @@ p {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  max-width: 360px;
+  max-width: 480px;
 }
 
 .player-container > .player-content:nth-child(2) {
-  min-width: 250px;
-  max-width: 350px;
+  min-width: 300px;
+  max-width: 400px;
 }
 
 .player-container > .player-content:nth-child(3) {
-  max-width: 400px;
-  padding-right: 0;
+  max-width: 480px;
 }
 
 .player-content > .player-stats {
 }
 
 .history-container {
-  height: 700px;
+  height: 90vh;
   overflow: auto;
 }
 
@@ -213,6 +208,5 @@ p {
   .player-container > .player-content:nth-child(3) {
     width: 100%;
     max-width: none;
-    padding: 0 10px;
   }
 }
