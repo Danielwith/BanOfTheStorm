@@ -1,4 +1,5 @@
 const API_URL = "https://www.heroesprofile.com/api/v1";
+const API_URL_2 = "https://api.heroesprofile.com/openApi";
 const BLOB_URL = "https://www.heroesprofile.com/images/talents";
 
 const data = {
@@ -277,6 +278,7 @@ function getPlayerInfo(battletag) {
                 },
                 history: {
                   first_match: {
+                    replay_id: playerData.matchData[0]?.replayID,
                     game_type: playerData.matchData[0]?.game_type?.name || null,
                     game_date: playerData.matchData[0]?.game_date || null,
                     game_map_name:
@@ -364,6 +366,7 @@ function getPlayerInfo(battletag) {
                   },
 
                   second_match: {
+                    replay_id: playerData.matchData[1]?.replayID,
                     game_type: playerData.matchData[1]?.game_type?.name || null,
                     game_date: playerData.matchData[1]?.game_date || null,
                     game_map_name:
@@ -451,6 +454,7 @@ function getPlayerInfo(battletag) {
                   },
 
                   third_match: {
+                    replay_id: playerData.matchData[2]?.replayID,
                     game_type: playerData.matchData[2]?.game_type?.name || null,
                     game_date: playerData.matchData[2]?.game_date || null,
                     game_map_name:
@@ -538,6 +542,7 @@ function getPlayerInfo(battletag) {
                   },
 
                   fourth_match: {
+                    replay_id: playerData.matchData[3]?.replayID,
                     game_type: playerData.matchData[3]?.game_type?.name || null,
                     game_date: playerData.matchData[3]?.game_date || null,
                     game_map_name:
@@ -625,6 +630,7 @@ function getPlayerInfo(battletag) {
                   },
 
                   fifth_match: {
+                    replay_id: playerData.matchData[4]?.replayID,
                     game_type: playerData.matchData[4]?.game_type?.name || null,
                     game_date: playerData.matchData[4]?.game_date || null,
                     game_map_name:
@@ -1008,6 +1014,18 @@ function generateCardHtml(data, username) {
                               <div class="map-status" style="background-color: ${
                                 property_1.game_victory == 1 ? "green" : "red"
                               }">
+                              <div class="ms-3 mt-2 text-end">
+                    <span class="badge border btn btn-outline-dark" onclick="getReplay('${
+                      property_1.replay_id
+                    }')"><svg
+                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-download" viewBox="0 0 16 16">
+                        <path
+                          d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+                        <path
+                          d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
+                      </svg></span>
+                  </div>
                               </div>
                             </div>
                           </div>
@@ -1070,4 +1088,20 @@ function generateCardHtml(data, username) {
   const popoverList = [...popoverTriggerList].map(
     (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
   );
+}
+
+function getReplay(replayId) {
+  fetch(`${API_URL_2}/Replay/Download?replayID=${replayId}`)
+    .then((res) => res.blob())
+    .then((blob) => {
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `${replayId}.StormReplay`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      window.URL.revokeObjectURL(url);
+    })
+    .catch((error) => console.error("Error al descargar el archivo:", error));
 }

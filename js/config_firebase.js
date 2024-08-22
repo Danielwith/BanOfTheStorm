@@ -33,7 +33,7 @@ export function fetchUrlsImg() {
   return new Promise((resolve, reject) => {
     listAll(storageRef).then((r) => {
       arrImgHeroes = r.items.map((item) => {
-        const key = item.name.split(".")[0];
+        const key = item.name.substring(0, item.name.lastIndexOf("."));
         const value = item._location.path_;
         return { [key]: value };
       });
