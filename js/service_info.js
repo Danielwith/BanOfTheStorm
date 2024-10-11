@@ -75,109 +75,157 @@ function getPlayerInfo(battletag) {
                   highest_wr: [
                     {
                       hero_name:
-                        playerData.heroes_three_highest_win_rate[0].hero.name,
+                        playerData?.heroes_three_highest_win_rate?.[0]?.hero
+                          ?.name ?? null,
                       hero_win:
-                        playerData.heroes_three_highest_win_rate[0].wins,
+                        playerData?.heroes_three_highest_win_rate?.[0]?.wins ??
+                        null,
                       hero_defeat:
-                        playerData.heroes_three_highest_win_rate[0].losses,
+                        playerData?.heroes_three_highest_win_rate?.[0]
+                          ?.losses ?? null,
                       hero_wr:
-                        playerData.heroes_three_highest_win_rate[0].win_rate,
+                        playerData?.heroes_three_highest_win_rate?.[0]
+                          ?.win_rate ?? null,
                       hero_played:
-                        playerData.heroes_three_highest_win_rate[0]
-                          .games_played,
+                        playerData?.heroes_three_highest_win_rate?.[0]
+                          ?.games_played ?? null,
                     },
                     {
                       hero_name:
-                        playerData.heroes_three_highest_win_rate[1].hero.name,
+                        playerData?.heroes_three_highest_win_rate?.[1]?.hero
+                          ?.name ?? null,
                       hero_win:
-                        playerData.heroes_three_highest_win_rate[1].wins,
+                        playerData?.heroes_three_highest_win_rate?.[1]?.wins ??
+                        null,
                       hero_defeat:
-                        playerData.heroes_three_highest_win_rate[1].losses,
+                        playerData?.heroes_three_highest_win_rate?.[1]
+                          ?.losses ?? null,
                       hero_wr:
-                        playerData.heroes_three_highest_win_rate[1].win_rate,
+                        playerData?.heroes_three_highest_win_rate?.[1]
+                          ?.win_rate ?? null,
                       hero_played:
-                        playerData.heroes_three_highest_win_rate[1]
-                          .games_played,
+                        playerData?.heroes_three_highest_win_rate?.[1]
+                          ?.games_played ?? null,
                     },
                     {
                       hero_name:
-                        playerData.heroes_three_highest_win_rate[2].hero.name,
+                        playerData?.heroes_three_highest_win_rate?.[2]?.hero
+                          ?.name ?? null,
                       hero_win:
-                        playerData.heroes_three_highest_win_rate[2].wins,
+                        playerData?.heroes_three_highest_win_rate?.[2]?.wins ??
+                        null,
                       hero_defeat:
-                        playerData.heroes_three_highest_win_rate[2].losses,
+                        playerData?.heroes_three_highest_win_rate?.[2]
+                          ?.losses ?? null,
                       hero_wr:
-                        playerData.heroes_three_highest_win_rate[2].win_rate,
+                        playerData?.heroes_three_highest_win_rate?.[2]
+                          ?.win_rate ?? null,
                       hero_played:
-                        playerData.heroes_three_highest_win_rate[2]
-                          .games_played,
+                        playerData?.heroes_three_highest_win_rate?.[2]
+                          ?.games_played ?? null,
                     },
                   ],
                   most_played: [
                     {
                       hero_name:
-                        playerData.heroes_three_most_played[0].hero.name,
-                      hero_win: playerData.heroes_three_most_played[0].wins,
+                        playerData?.heroes_three_most_played?.[0]?.hero?.name ??
+                        null,
+                      hero_win:
+                        playerData?.heroes_three_most_played?.[0]?.wins ?? null,
                       hero_defeat:
-                        playerData.heroes_three_most_played[0].losses,
-                      hero_wr: playerData.heroes_three_most_played[0].win_rate,
+                        playerData?.heroes_three_most_played?.[0]?.losses ??
+                        null,
+                      hero_wr:
+                        playerData?.heroes_three_most_played?.[0]?.win_rate ??
+                        null,
                       hero_played:
-                        playerData.heroes_three_most_played[0].games_played,
+                        playerData?.heroes_three_most_played?.[0]
+                          ?.games_played ?? null,
                     },
                     {
                       hero_name:
-                        playerData.heroes_three_most_played[1].hero.name,
-                      hero_win: playerData.heroes_three_most_played[1].wins,
+                        playerData?.heroes_three_most_played?.[1]?.hero?.name ??
+                        null,
+                      hero_win:
+                        playerData?.heroes_three_most_played?.[1]?.wins ?? null,
                       hero_defeat:
-                        playerData.heroes_three_most_played[1].losses,
-                      hero_wr: playerData.heroes_three_most_played[1].win_rate,
+                        playerData?.heroes_three_most_played?.[1]?.losses ??
+                        null,
+                      hero_wr:
+                        playerData?.heroes_three_most_played?.[1]?.win_rate ??
+                        null,
                       hero_played:
-                        playerData.heroes_three_most_played[1].games_played,
+                        playerData?.heroes_three_most_played?.[1]
+                          ?.games_played ?? null,
                     },
                     {
                       hero_name:
-                        playerData.heroes_three_most_played[2].hero.name,
-                      hero_win: playerData.heroes_three_most_played[2].wins,
+                        playerData?.heroes_three_most_played?.[2]?.hero?.name ??
+                        null,
+                      hero_win:
+                        playerData?.heroes_three_most_played?.[2]?.wins ?? null,
                       hero_defeat:
-                        playerData.heroes_three_most_played[2].losses,
-                      hero_wr: playerData.heroes_three_most_played[2].win_rate,
+                        playerData?.heroes_three_most_played?.[2]?.losses ??
+                        null,
+                      hero_wr:
+                        playerData?.heroes_three_most_played?.[2]?.win_rate ??
+                        null,
                       hero_played:
-                        playerData.heroes_three_most_played[2].games_played,
+                        playerData?.heroes_three_most_played?.[2]
+                          ?.games_played ?? null,
                     },
                   ],
                   latest_played: [
                     {
                       hero_name:
-                        playerData.heroes_three_latest_played[0].hero.name,
-                      hero_win: playerData.heroes_three_latest_played[0].wins,
+                        playerData?.heroes_three_latest_played?.[0]?.hero
+                          ?.name ?? null,
+                      hero_win:
+                        playerData?.heroes_three_latest_played?.[0]?.wins ??
+                        null,
                       hero_defeat:
-                        playerData.heroes_three_latest_played[0].losses,
+                        playerData?.heroes_three_latest_played?.[0]?.losses ??
+                        null,
                       hero_wr:
-                        playerData.heroes_three_latest_played[0].win_rate,
+                        playerData?.heroes_three_latest_played?.[0]?.win_rate ??
+                        null,
                       hero_played:
-                        playerData.heroes_three_latest_played[0].games_played,
+                        playerData?.heroes_three_latest_played?.[0]
+                          ?.games_played ?? null,
                     },
                     {
                       hero_name:
-                        playerData.heroes_three_latest_played[1].hero.name,
-                      hero_win: playerData.heroes_three_latest_played[1].wins,
+                        playerData?.heroes_three_latest_played?.[1]?.hero
+                          ?.name ?? null,
+                      hero_win:
+                        playerData?.heroes_three_latest_played?.[1]?.wins ??
+                        null,
                       hero_defeat:
-                        playerData.heroes_three_latest_played[1].losses,
+                        playerData?.heroes_three_latest_played?.[1]?.losses ??
+                        null,
                       hero_wr:
-                        playerData.heroes_three_latest_played[1].win_rate,
+                        playerData?.heroes_three_latest_played?.[1]?.win_rate ??
+                        null,
                       hero_played:
-                        playerData.heroes_three_latest_played[1].games_played,
+                        playerData?.heroes_three_latest_played?.[1]
+                          ?.games_played ?? null,
                     },
                     {
                       hero_name:
-                        playerData.heroes_three_latest_played[2].hero.name,
-                      hero_win: playerData.heroes_three_latest_played[2].wins,
+                        playerData?.heroes_three_latest_played?.[2]?.hero
+                          ?.name ?? null,
+                      hero_win:
+                        playerData?.heroes_three_latest_played?.[2]?.wins ??
+                        null,
                       hero_defeat:
-                        playerData.heroes_three_latest_played[2].losses,
+                        playerData?.heroes_three_latest_played?.[2]?.losses ??
+                        null,
                       hero_wr:
-                        playerData.heroes_three_latest_played[2].win_rate,
+                        playerData?.heroes_three_latest_played?.[2]?.win_rate ??
+                        null,
                       hero_played:
-                        playerData.heroes_three_latest_played[2].games_played,
+                        playerData?.heroes_three_latest_played?.[2]
+                          ?.games_played ?? null,
                     },
                   ],
                 },
@@ -185,94 +233,151 @@ function getPlayerInfo(battletag) {
                   highest_wr: [
                     {
                       map_name:
-                        playerData.maps_three_highest_win_rate[0].game_map.name,
-                      map_win: playerData.maps_three_highest_win_rate[0].wins,
+                        playerData?.maps_three_highest_win_rate?.[0]?.game_map
+                          ?.name ?? null,
+                      map_win:
+                        playerData?.maps_three_highest_win_rate?.[0]?.wins ??
+                        null,
                       map_defeat:
-                        playerData.maps_three_highest_win_rate[0].losses,
+                        playerData?.maps_three_highest_win_rate?.[0]?.losses ??
+                        null,
                       map_wr:
-                        playerData.maps_three_highest_win_rate[0].win_rate,
+                        playerData?.maps_three_highest_win_rate?.[0]
+                          ?.win_rate ?? null,
                       map_played:
-                        playerData.maps_three_highest_win_rate[0].games_played,
+                        playerData?.maps_three_highest_win_rate?.[0]
+                          ?.games_played ?? null,
                     },
                     {
                       map_name:
-                        playerData.maps_three_highest_win_rate[1].game_map.name,
-                      map_win: playerData.maps_three_highest_win_rate[1].wins,
+                        playerData?.maps_three_highest_win_rate?.[1]?.game_map
+                          ?.name ?? null,
+                      map_win:
+                        playerData?.maps_three_highest_win_rate?.[1]?.wins ??
+                        null,
                       map_defeat:
-                        playerData.maps_three_highest_win_rate[1].losses,
+                        playerData?.maps_three_highest_win_rate?.[1]?.losses ??
+                        null,
                       map_wr:
-                        playerData.maps_three_highest_win_rate[1].win_rate,
+                        playerData?.maps_three_highest_win_rate?.[1]
+                          ?.win_rate ?? null,
                       map_played:
-                        playerData.maps_three_highest_win_rate[1].games_played,
+                        playerData?.maps_three_highest_win_rate?.[1]
+                          ?.games_played ?? null,
                     },
                     {
                       map_name:
-                        playerData.maps_three_highest_win_rate[2].game_map.name,
-                      map_win: playerData.maps_three_highest_win_rate[2].wins,
+                        playerData?.maps_three_highest_win_rate?.[2]?.game_map
+                          ?.name ?? null,
+                      map_win:
+                        playerData?.maps_three_highest_win_rate?.[2]?.wins ??
+                        null,
                       map_defeat:
-                        playerData.maps_three_highest_win_rate[2].losses,
+                        playerData?.maps_three_highest_win_rate?.[2]?.losses ??
+                        null,
                       map_wr:
-                        playerData.maps_three_highest_win_rate[2].win_rate,
+                        playerData?.maps_three_highest_win_rate?.[2]
+                          ?.win_rate ?? null,
                       map_played:
-                        playerData.maps_three_highest_win_rate[2].games_played,
+                        playerData?.maps_three_highest_win_rate?.[2]
+                          ?.games_played ?? null,
                     },
                   ],
                   most_played: [
                     {
                       map_name:
-                        playerData.maps_three_most_played[0].game_map.name,
-                      map_win: playerData.maps_three_most_played[0].wins,
-                      map_defeat: playerData.maps_three_most_played[0].losses,
-                      map_wr: playerData.maps_three_most_played[0].win_rate,
+                        playerData?.maps_three_most_played?.[0]?.game_map
+                          ?.name ?? null,
+                      map_win:
+                        playerData?.maps_three_most_played?.[0]?.wins ?? null,
+                      map_defeat:
+                        playerData?.maps_three_most_played?.[0]?.losses ?? null,
+                      map_wr:
+                        playerData?.maps_three_most_played?.[0]?.win_rate ??
+                        null,
                       map_played:
-                        playerData.maps_three_most_played[0].games_played,
+                        playerData?.maps_three_most_played?.[0]?.games_played ??
+                        null,
                     },
                     {
                       map_name:
-                        playerData.maps_three_most_played[1].game_map.name,
-                      map_win: playerData.maps_three_most_played[1].wins,
-                      map_defeat: playerData.maps_three_most_played[1].losses,
-                      map_wr: playerData.maps_three_most_played[1].win_rate,
+                        playerData?.maps_three_most_played?.[1]?.game_map
+                          ?.name ?? null,
+                      map_win:
+                        playerData?.maps_three_most_played?.[1]?.wins ?? null,
+                      map_defeat:
+                        playerData?.maps_three_most_played?.[1]?.losses ?? null,
+                      map_wr:
+                        playerData?.maps_three_most_played?.[1]?.win_rate ??
+                        null,
                       map_played:
-                        playerData.maps_three_most_played[1].games_played,
+                        playerData?.maps_three_most_played?.[1]?.games_played ??
+                        null,
                     },
                     {
                       map_name:
-                        playerData.maps_three_most_played[2].game_map.name,
-                      map_win: playerData.maps_three_most_played[2].wins,
-                      map_defeat: playerData.maps_three_most_played[2].losses,
-                      map_wr: playerData.maps_three_most_played[2].win_rate,
+                        playerData?.maps_three_most_played?.[2]?.game_map
+                          ?.name ?? null,
+                      map_win:
+                        playerData?.maps_three_most_played?.[2]?.wins ?? null,
+                      map_defeat:
+                        playerData?.maps_three_most_played?.[2]?.losses ?? null,
+                      map_wr:
+                        playerData?.maps_three_most_played?.[2]?.win_rate ??
+                        null,
                       map_played:
-                        playerData.maps_three_most_played[2].games_played,
+                        playerData?.maps_three_most_played?.[2]?.games_played ??
+                        null,
                     },
                   ],
                   latest_played: [
                     {
                       map_name:
-                        playerData.maps_three_latest_played[0].game_map.name,
-                      map_win: playerData.maps_three_latest_played[0].wins,
-                      map_defeat: playerData.maps_three_latest_played[0].losses,
-                      map_wr: playerData.maps_three_latest_played[0].win_rate,
+                        playerData?.maps_three_latest_played?.[0]?.game_map
+                          ?.name ?? null,
+                      map_win:
+                        playerData?.maps_three_latest_played?.[0]?.wins ?? null,
+                      map_defeat:
+                        playerData?.maps_three_latest_played?.[0]?.losses ??
+                        null,
+                      map_wr:
+                        playerData?.maps_three_latest_played?.[0]?.win_rate ??
+                        null,
                       map_played:
-                        playerData.maps_three_latest_played[0].games_played,
+                        playerData?.maps_three_latest_played?.[0]
+                          ?.games_played ?? null,
                     },
                     {
                       map_name:
-                        playerData.maps_three_latest_played[1].game_map.name,
-                      map_win: playerData.maps_three_latest_played[1].wins,
-                      map_defeat: playerData.maps_three_latest_played[1].losses,
-                      map_wr: playerData.maps_three_latest_played[1].win_rate,
+                        playerData?.maps_three_latest_played?.[1]?.game_map
+                          ?.name ?? null,
+                      map_win:
+                        playerData?.maps_three_latest_played?.[1]?.wins ?? null,
+                      map_defeat:
+                        playerData?.maps_three_latest_played?.[1]?.losses ??
+                        null,
+                      map_wr:
+                        playerData?.maps_three_latest_played?.[1]?.win_rate ??
+                        null,
                       map_played:
-                        playerData.maps_three_latest_played[1].games_played,
+                        playerData?.maps_three_latest_played?.[1]
+                          ?.games_played ?? null,
                     },
                     {
                       map_name:
-                        playerData.maps_three_latest_played[2].game_map.name,
-                      map_win: playerData.maps_three_latest_played[2].wins,
-                      map_defeat: playerData.maps_three_latest_played[2].losses,
-                      map_wr: playerData.maps_three_latest_played[2].win_rate,
+                        playerData?.maps_three_latest_played?.[2]?.game_map
+                          ?.name ?? null,
+                      map_win:
+                        playerData?.maps_three_latest_played?.[2]?.wins ?? null,
+                      map_defeat:
+                        playerData?.maps_three_latest_played?.[2]?.losses ??
+                        null,
+                      map_wr:
+                        playerData?.maps_three_latest_played?.[2]?.win_rate ??
+                        null,
                       map_played:
-                        playerData.maps_three_latest_played[2].games_played,
+                        playerData?.maps_three_latest_played?.[2]
+                          ?.games_played ?? null,
                     },
                   ],
                 },
@@ -817,11 +922,13 @@ function generateCardHtml(data, username) {
                               <button type="button"
                                 class="btn w-auto rounded-circle btn-dark m-1 position-relative d-flex justify-content-center"
                                 style="padding: 2px;" data-bs-toggle="popover" data-bs-title="${
-                                  e.hero_name
+                                  e.hero_name ?? "No value"
                                 }"
-                                data-bs-content="V: ${e.hero_win} | D: ${
-      e.hero_defeat
-    } | Total: ${e.hero_played}">
+                                data-bs-content="V: ${
+                                  e.hero_win ?? "No value"
+                                } | D: ${
+      e.hero_defeat ?? "No value"
+    } | Total: ${e.hero_played ?? "No value"}">
                                 <img class="rounded-circle" width="38px"
                                   src="${window["objURLHero"][e.hero_name]}"
                                   alt="">
@@ -844,11 +951,13 @@ function generateCardHtml(data, username) {
                               <button type="button"
                                 class="btn w-auto rounded-circle btn-dark m-1 position-relative d-flex justify-content-center"
                                 style="padding: 2px;" data-bs-toggle="popover" data-bs-title="${
-                                  e.hero_name
+                                  e.hero_name ?? "No value"
                                 }"
-                                data-bs-content="V: ${e.hero_win} | D: ${
-      e.hero_defeat
-    } | Total: ${e.hero_played}">
+                                data-bs-content="V: ${
+                                  e.hero_win ?? "No value"
+                                } | D: ${
+      e.hero_defeat ?? "No value"
+    } | Total: ${e.hero_played ?? "No value"}">
                                 <img class="rounded-circle" width="38px"
                                   src="${window["objURLHero"][e.hero_name]}"
                                   alt="">
@@ -871,11 +980,13 @@ function generateCardHtml(data, username) {
                               <button type="button"
                                 class="btn w-auto rounded-circle btn-dark m-1 position-relative d-flex justify-content-center"
                                 style="padding: 2px;" data-bs-toggle="popover" data-bs-title="${
-                                  e.hero_name
+                                  e.hero_name ?? "No value"
                                 }"
-                                data-bs-content="V: ${e.hero_win} | D: ${
-      e.hero_defeat
-    } | Total: ${e.hero_played}">
+                                data-bs-content="V: ${
+                                  e.hero_win ?? "No value"
+                                } | D: ${
+      e.hero_defeat ?? "No value"
+    } | Total: ${e.hero_played ?? "No value"}">
                                 <img class="rounded-circle" width="38px"
                                   src="${window["objURLHero"][e.hero_name]}"
                                   alt="">
@@ -903,16 +1014,20 @@ function generateCardHtml(data, username) {
                               <button type="button"
                                 class="btn w-auto rounded-circle btn-dark m-1 position-relative d-flex justify-content-center"
                                 style="padding: 2px;" data-bs-toggle="popover" data-bs-title="${
-                                  e.map_name
+                                  e.map_name ?? "No value"
                                 }"
-                                data-bs-content="V: ${e.map_win} | D: ${
-      e.map_defeat
-    } | Total: ${e.map_played}">
+                                data-bs-content="V: ${
+                                  e.map_win ?? "No value"
+                                } | D: ${e.map_defeat ?? "No value"} | Total: ${
+      e.map_played ?? "No value"
+    }">
                                 <img class="rounded-circle" width="38px"
                                   src="${
-                                    window["objURLHero"][
-                                      e.map_name.split(" ").join("_")
-                                    ]
+                                    typeof e.map_name == "string"
+                                      ? window["objURLHero"][
+                                          e.map_name.split(" ").join("_")
+                                        ]
+                                      : "undefined"
                                   }"
                                   alt="">
                                 <span class="badge bg-transparent position-absolute">${
@@ -934,16 +1049,20 @@ function generateCardHtml(data, username) {
                               <button type="button"
                                 class="btn w-auto rounded-circle btn-dark m-1 position-relative d-flex justify-content-center"
                                 style="padding: 2px;" data-bs-toggle="popover" data-bs-title="${
-                                  e.map_name
+                                  e.map_name ?? "No value"
                                 }"
-                                data-bs-content="V: ${e.map_win} | D: ${
-      e.map_defeat
-    } | Total: ${e.map_played}">
+                                data-bs-content="V: ${
+                                  e.map_win ?? "No value"
+                                } | D: ${e.map_defeat ?? "No value"} | Total: ${
+      e.map_played ?? "No value"
+    }">
                                 <img class="rounded-circle" width="38px"
                                   src="${
-                                    window["objURLHero"][
-                                      e.map_name.split(" ").join("_")
-                                    ]
+                                    typeof e.map_name == "string"
+                                      ? window["objURLHero"][
+                                          e.map_name.split(" ").join("_")
+                                        ]
+                                      : "undefined"
                                   }"
                                   alt="">
                                 <span class="badge bg-transparent position-absolute">${
@@ -965,16 +1084,20 @@ function generateCardHtml(data, username) {
                               <button type="button"
                                 class="btn w-auto rounded-circle btn-dark m-1 position-relative d-flex justify-content-center"
                                 style="padding: 2px;" data-bs-toggle="popover" data-bs-title="${
-                                  e.map_name
+                                  e.map_name ?? "No value"
                                 }"
-                                data-bs-content="V: ${e.map_win} | D: ${
-      e.map_defeat
-    } | Total: ${e.map_played}">
+                                data-bs-content="V: ${
+                                  e.map_win ?? "No value"
+                                } | D: ${e.map_defeat ?? "No value"} | Total: ${
+      e.map_played ?? "No value"
+    }">
                                 <img class="rounded-circle" width="38px"
                                   src="${
-                                    window["objURLHero"][
-                                      e.map_name.split(" ").join("_")
-                                    ]
+                                    typeof e.map_name == "string"
+                                      ? window["objURLHero"][
+                                          e.map_name.split(" ").join("_")
+                                        ]
+                                      : "undefined"
                                   }"
                                   alt="">
                                 <span class="badge bg-transparent position-absolute">${
@@ -1002,9 +1125,11 @@ function generateCardHtml(data, username) {
     cardHTML += `
                         <div class="history-content">
                           <div class="map-name" style="background-image: url('${
-                            window["objURLHero"][
-                              property_1.game_map_name.split(" ").join("_")
-                            ]
+                            typeof property_1.game_map_name == "string"
+                              ? window["objURLHero"][
+                                  property_1.game_map_name.split(" ").join("_")
+                                ]
+                              : "undefined"
                           }')">
                             <div class="map-data text-end h-100 d-flex flex-column flex-wrap justify-content-end">
                               <p>${getLocalDate(property_1.game_date)}</p>
