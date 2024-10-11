@@ -5,7 +5,7 @@ const BLOB_URL = "https://www.heroesprofile.com/images/talents";
 const data = {
   userinput: "LLENN#11396",
 };
-var seasonNumber = 27;
+var seasonNumber = 28;
 
 // getPlayerInfo("LLENN#11396");
 
@@ -1007,7 +1007,7 @@ function generateCardHtml(data, username) {
                             ]
                           }')">
                             <div class="map-data text-end h-100 d-flex flex-column flex-wrap justify-content-end">
-                              <p>${property_1.game_date}</p>
+                              <p>${getLocalDate(property_1.game_date)}</p>
                               <p>${property_1.game_map_name} (${
       property_1.game_type
     })</p>
@@ -1105,3 +1105,21 @@ function getReplay(replayId) {
     })
     .catch((error) => console.error("Error al descargar el archivo:", error));
 }
+
+function getLocalDate(date) {
+  const dateObj = new Date(date);
+  dateObj.setHours(dateObj.getHours() - 5);
+
+  const year = dateObj.getFullYear();
+  const month = String(dateObj.getMonth() + 1).padStart(2, "0");
+  const day = String(dateObj.getDate()).padStart(2, "0");
+  const hours = String(dateObj.getHours()).padStart(2, "0");
+  const minutes = String(dateObj.getMinutes()).padStart(2, "0");
+  const seconds = String(dateObj.getSeconds()).padStart(2, "0");
+
+  // Formatear la fecha como "YYYY-MM-DD HH:mm:ss"
+  return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+  return dateObj;
+}
+
+// getReplay("54678877");
